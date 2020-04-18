@@ -217,9 +217,9 @@ class SimpleGeneticAlgorithm():
     def generateOffspring(self):
         """[Main function loop:
             - selects best parents
-            - do crossover operation
-            - sometimes mutates genes
-            - substitute 2 worst individuals
+            - do crossover operation to form new children
+            - * sometimes * mutates genes
+            - substitute 2 worst individuals with the offspring
             
             Until an individual achieves maximum fitness or
             the number of iterations is achived]
@@ -227,7 +227,7 @@ class SimpleGeneticAlgorithm():
         Returns:
             [string] -- [Informs best generation and its mean or if a fittest individual is found
                          informs the generation and the fitness scores of each individual]
-        """        
+        """       
         i = 1
         fittest_found = False
         sum_best_solution = 0
